@@ -1,0 +1,474 @@
+*{
+    background-color: #bdc7d1;
+}
+h1,caption,button{
+    color:#0056B3 ;
+}
+button{
+    border-radius: 10%;
+}
+button:hover{
+position: relative;
+left: 2px;
+top: 3px;
+}
+.prjtMiniature, .button {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.prjtMiniature:hover, .button:hover {
+    transform: scale(1.05); /* Légère augmentation au survol */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
+}
+
+.menu a, .button {
+    color: #007BFF;
+    transition: color 0.2s ease, background-color 0.3s ease;
+}
+.menu a:hover, .button:hover {
+    color: #FFFFFF;
+    background-color: #0056B3;
+}
+a[id= "unique"]{
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #FFFFFF;
+}
+body {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9) ;
+}
+h1, h2 {    font-weight: 600;
+    color: #007BFF;
+    text-align: center;
+}
+
+.galérie a {
+    flex: 1 1 calc(33.333% - 16px); /* 3 colonnes */
+    box-sizing: border-box;
+}
+.en-tête{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    align-items: center;
+    
+}
+ a{
+    text-decoration: none;
+   
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+ol, ul{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+.background{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.profil{
+    background-image: url("a0ef781ca2ed874972ab654eac5ac1e5.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    padding: 60px;
+    padding-left: 30px;
+    padding-right: 30px; 
+}
+.profil p,img{
+    background: rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+}
+footer{
+    background-color: #007BFF;
+    margin-top: 30px;
+    padding: 50px;
+    color: #FFFFFF;
+    text-align: center;
+    
+}
+h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+   
+}
+td, th{
+    border: solid;
+    padding: 30px;
+}
+header{
+    background-color: brown;
+    position: sticky;
+}
+caption{
+    
+    margin: 30px;
+}
+table{
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    width: 1000px;
+}
+/* Style de la galerie */
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajustable selon l'écran */
+    gap: 20px;
+    padding: 20px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    justify-items: center; /* Centrer les éléments */
+    align-items: center;
+}
+
+/* Style des miniatures */
+.prjtMiniature {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.imageClick {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prjtMiniature img {
+    width: 70%;
+    margin: auto;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+.Description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+.click {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.imageClick:hover .click {
+    opacity: 1;
+}
+
+
+/* Effet au survol */
+.prjtMiniature:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.prjtMiniature img:hover {
+    transform: scale(1.1);
+}
+/* Responsive Design */
+
+/* Pour les tablettes (écran de 768px à 1024px) */
+@media screen and (max-width: 1024px) {
+    .en-tête {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .profil {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .profil img {
+        width: 60%;
+    }
+}
+
+/* Pour les mobiles (écran de 480px à 767px) */
+@media screen and (max-width: 767px) {
+    body {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .en-tête {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .profil {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .profil img {
+        width: 80%;
+    }
+
+    .profil p {
+        font-size: 14px;
+    }
+
+    .galerie {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+/* Pour les petits mobiles (écran de moins de 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .profil img {
+        width: 90%;
+    }
+
+    .profil p {
+        font-size: 12px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .galerie {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+/* Responsive Design */
+
+/* Tablette (max 1024px) */
+@media screen and (max-width: 1024px) {
+    table {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Mobile (max 768px) */
+@media screen and (max-width: 768px) {
+    ol, ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+}
+
+/* Très petit écran (max 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        margin: 10px;
+    }
+
+    h1, h2 {
+        font-size: 18px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+/* Styles pour tablette */
+@media screen and (max-width: 1024px) {
+    .galerie {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* Styles pour mobile */
+@media screen and (max-width: 768px) {
+    .galerie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .prjtMiniature {
+        width: 90%;
+    }
+
+    .imageClick img {
+        width: 100%;
+        height: auto;
+    }
+
+    .click {
+        font-size: 14px;
+    }
+
+    .description {
+        text-align: center;
+        font-size: 14px;
+    }
+}
+/* Styles de base du formulaire */
+form {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Style des champs */
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style du textarea */
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Bouton d’envoi */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 📱 Responsive pour tablette */
+@media screen and (max-width: 1024px) {
+    form {
+        width: 70%;
+    }
+}
+
+/* 📱 Responsive pour mobile */
+@media screen and (max-width: 768px) {
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+.bienvenue {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+
+
